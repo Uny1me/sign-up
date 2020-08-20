@@ -35,16 +35,23 @@
 
           <form action="#" method="POST" id="form">
 
-            <input type="text" name="First Name" placeholder="First Name" id="first">
+            <label for="First Name">First Name <p>*</p></label>
+            <input type="text" aria-label = "first name" name="First Name" placeholder="First Name" id="first">
             <span id="fname"></span>
-  
-            <input type="text" name="Last name" placeholder="Last Name" id="last">
+
+
+            <label for="Last Name">Last Name <p>*</p></label>           
+            <input type="text" aria-label = "last name" name="Last name" placeholder="Last Name" id="last">
             <span id = "lname"></span>
 
-            <input type="email" name="Email Address" placeholder="Email Address" id="email">
+
+            <label for="Email Address">Email Address <p>*</p></label>
+            <input type="email" aria-label = "email address" name="Email Address" placeholder="Email Address" id="email">
             <span id="emailVal"></span>
 
-            <input type="password" name="Password" placeholder="Password" id="password">
+
+            <label for="Password">Password <p>*</p></label>
+            <input type="password" aria-label = "password" name="Password" placeholder="Password" id="password">
             <span id="passVal"></span>
 
             <input type="submit" value="Claim your free trial" id = "submit">
