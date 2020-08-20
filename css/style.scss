@@ -1,0 +1,211 @@
+:root {
+    --main-red: hsl(0, 100%, 74%);
+    --main-green: hsl(154, 59%, 51%);
+    --main-blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --gray-blue: hsl(246, 25%, 77%);
+}
+
+
+*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #eee;
+}
+
+body, input {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.container {
+    margin: 0;
+    background: url(../images/bg-intro-mobile.png);
+    background-color: var(--main-red);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .second {
+        padding-top: 2rem;
+    }
+
+    .row{
+        max-width: 90%;
+        margin: 0 auto;
+
+        .head {
+            font-size: 1.3rem;
+            font-weight: 600;
+            max-width: 80%;  
+            margin: 2rem auto;
+        }
+
+        .sub-text {
+            font-size: .85rem;
+            letter-spacing: .012rem;
+            
+        }
+
+        .contain {
+            background: var(--main-blue);
+            padding: .6rem 4rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            box-shadow:
+                    0 5px 2px hsl(0, 90%, 65%),
+                    0 5px 2px hsl(0, 90%, 65%);
+            font-size: .7rem;
+            font-weight: 200;
+            
+            span {
+                font-weight: 600;
+                letter-spacing: .03rem;
+            }
+            
+        }
+
+        form {
+            background-color: #fff;
+            padding: 1rem 1rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            box-shadow:
+                    0 5px 2px hsl(0, 90%, 65%),
+                    0 5px 2px hsl(0, 90%, 65%);
+            
+            input {
+                padding: .7rem 1rem;
+                font-size: .85rem;
+                color: #232323;
+                font-weight: 600;                
+                border-radius: 4px;
+                border: 1px solid rgb(177, 177, 177);
+                margin-top: 1rem;
+            }
+            .error {
+                border: 2px solid var(--main-red);
+                background: url(../images/icon-error.svg) no-repeat;
+                background-position: 95% 50%;
+            }
+            .error-text {
+                font-size: .8rem;
+                font-style: italic;
+                margin-left: auto;
+                margin-top: .4rem;
+                margin-bottom: 0px;
+                color: var(--main-red);
+            }
+            .success {
+                border: 2px solid var(--main-green);
+            }
+
+            input:active, input:focus {    
+             outline: none;
+            }
+            #submit {
+                background-color: var(--main-green);
+                color: #fff;
+                text-transform: uppercase;
+                font-size: .9rem;
+                letter-spacing: .07rem;
+                box-shadow:
+                    0 5px 2px hsl(154, 77%, 35%),
+                    0 5px 2px hsl(154, 77%, 35%);  
+            }
+            
+            small {
+                padding-top: .7rem;
+                max-width: 90%;
+                color: rgb(131, 131, 131);      
+                margin: 0 auto;
+
+                span {
+                    color: hsl(0, 90%, 65%);;
+                    font-weight: 600;
+                }
+            }
+        }
+    }      
+    
+}
+
+@media (min-width:768px) {
+    .container {
+        background: url(/images/bg-intro-desktop.png);
+        background-color: var(--main-red);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+        .row{
+            max-width: 90%;
+            margin: 0 auto;
+        }
+    
+            .head {
+                font-size: 2.5rem !important;
+                max-width: 60% !important;  
+                margin: 0 auto;
+            }
+    
+            .sub-text {
+                max-width: 60%;  
+                margin: 0 auto;
+        }
+
+    .second {
+        padding: 2rem 2rem;
+    }
+
+    #submit {
+        padding: .5rem 5rem;
+        font-weight: 400;
+    }
+    
+    #submit:hover {
+        opacity: .85;
+        cursor: pointer;
+    }
+    
+    .contain {
+        padding: .6rem 1rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+        font-size: .6rem !important;
+
+        span {
+            padding-right: .2rem;
+        }
+     }
+     input {
+        font-size: .7rem !important;
+    }
+
+    small {
+        text-align: center; 
+        max-width: 100%;
+        padding: .8rem 0 !important;
+        font-size: .5rem !important;
+    }
+
+}
+
+
+
+.attribution { 
+    font-size: 11px;
+    color: #232323;
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

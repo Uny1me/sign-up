@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+<!-- 
+ <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
+  <title>FM - Sign up form</title>
+
+  <!-- ¯\_(ツ)_/¯ Started Mon Aug, 17 2020-->
+</head>
+
+<body>
+      <div class="container">
+
+        <div class="row">
+            <p class="head">Learn to code by watching others</h2>
+             <p class="sub-text">
+              See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+              but understanding how developers think is invaluable. </p>
+         </div>
+        
+         <div class="row second">
+
+          <div class="contain">
+            
+                <span>Try it free 7 days</span> then $20/mo. thereafter
+              
+          </div>
+
+          <form action="#" method="POST" id="form">
+
+            <input type="text" name="First Name" placeholder="First Name" id="first">
+            <span id="fname"></span>
+  
+            <input type="text" name="Last name" placeholder="Last Name" id="last">
+            <span id = "lname"></span>
+
+            <input type="email" name="Email Address" placeholder="Email Address" id="email" required>
+            <span id="emailVal"></span>
+
+            <input type="password" name="Password" placeholder="Password" id="password">
+            <span id="passVal"></span>
+
+            <input type="submit" value="Claim your free trial" id = "submit">
+
+            <small class="sub-text">By clicking the button, you are agreeing to our <span>Terms and Services</span></small>
+          </form>
+         </div>
+
+         <br>
+   </div>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://uny1me.github.io/portfolio">Unyime</a>.
+    </p>
+  </footer>
+
+<script>
+  window.onload = function () {
+    const form = document.getElementById('form');
+    const first = document.getElementById('first');
+    const last = document.getElementById('last');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    // const form = document.getElementById('form');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      var fname = first.value;
+      var lname = last.value.trim();
+      var emailVal = email.value.trim();
+      var passVal = password.value.trim();
+      var pattern = /^\w+([\.~]?\w+)*@\w+([\.~]?w+)*(\.\w{2,3})+$/;
+
+      if(fname === '') {
+        
+      function errorFunc(req, errMsg) {
+      var span = document.getElementById('fname');
+      span.innerText = errMsg;
+      req.className = 'error';
+      span.className = 'error-text';
+      }
+        errorFunc(first, 'First Name cannot be empty')
+      }
+        else {
+          function successFunc(req) {
+            var span = document.getElementById('fname');
+        req.className = 'success';
+        span.innerText = '';
+    }
+        successFunc(first)
+      } 
+
+
+      if(lname === '') {
+        
+      function errorFunc(req, errMsg) {
+      const span = document.getElementById('lname')
+      span.innerText = errMsg;
+      req.className = 'error';
+      span.className = 'error-text';
+      }
+      errorFunc(last, 'Last Name cannot be empty')
+      }
+      else {
+          function successFunc(req) {
+          var span = document.getElementById('lname');
+        req.className = 'success';
+        span.innerText = '';
+    }
+        successFunc(last)
+      } 
+ 
+      if(emailVal === '') {
+        
+      function errorFunc(req, errMsg) {
+      const span = document.getElementById('emailVal')
+      span.innerText = errMsg;
+      req.className = 'error';
+      span.className = 'error-text';
+      }
+      errorFunc(email, 'Email Address cannot be empty')
+      }
+      else {
+        function successFunc(req) {
+        var span = document.getElementById('emailVal');
+        req.className = 'success';
+        span.innerText = '';
+    }
+        successFunc(email)
+      } 
+ 
+      if(passVal === '') {
+        
+      function errorFunc(req, errMsg) {
+      const span = document.getElementById('passVal')
+      span.innerText = errMsg;
+      req.className = 'error';
+      span.className = 'error-text';
+      }
+      errorFunc(password, 'Password cannot be empty')
+      }
+      else {
+        function successFunc(req) {
+        var span = document.getElementById('passVal');
+        req.className = 'success';
+        span.innerText = '';
+    }
+        successFunc(password)
+      }     
+  
+
+    })
+
+    
+    }
+
+</script>
+
+
+</body>
+</html>

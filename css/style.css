@@ -1,0 +1,224 @@
+:root {
+  --main-red: hsl(0, 100%, 74%);
+  --main-green: hsl(154, 59%, 51%);
+  --main-blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --gray-blue: hsl(246, 25%, 77%);
+}
+
+*::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #eee;
+}
+
+body, input {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  margin: 0;
+  background: url(../images/bg-intro-mobile.png);
+  background-color: var(--main-red);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.container .second {
+  padding-top: 2rem;
+}
+
+.container .row {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.container .row .head {
+  font-size: 1.3rem;
+  font-weight: 600;
+  max-width: 80%;
+  margin: 2rem auto;
+}
+
+.container .row .sub-text {
+  font-size: .85rem;
+  letter-spacing: .012rem;
+}
+
+.container .row .contain {
+  background: var(--main-blue);
+  padding: .6rem 4rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  -webkit-box-shadow: 0 5px 2px #f65555, 0 5px 2px #f65555;
+          box-shadow: 0 5px 2px #f65555, 0 5px 2px #f65555;
+  font-size: .7rem;
+  font-weight: 200;
+}
+
+.container .row .contain span {
+  font-weight: 600;
+  letter-spacing: .03rem;
+}
+
+.container .row form {
+  background-color: #fff;
+  padding: 1rem 1rem;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 5px 2px #f65555, 0 5px 2px #f65555;
+          box-shadow: 0 5px 2px #f65555, 0 5px 2px #f65555;
+}
+
+.container .row form input {
+  padding: .7rem 1rem;
+  font-size: .85rem;
+  color: #232323;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid #b1b1b1;
+  margin-top: 1rem;
+}
+
+.container .row form .error {
+  border: 2px solid var(--main-red);
+  background: url(../images/icon-error.svg) no-repeat;
+  background-position: 95% 50%;
+}
+
+.container .row form .error-text {
+  font-size: .8rem;
+  font-style: italic;
+  margin-left: auto;
+  margin-top: .4rem;
+  margin-bottom: 0px;
+  color: var(--main-red);
+}
+
+.container .row form .success {
+  border: 2px solid var(--main-green);
+}
+
+.container .row form input:active, .container .row form input:focus {
+  outline: none;
+}
+
+.container .row form #submit {
+  background-color: var(--main-green);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: .9rem;
+  letter-spacing: .07rem;
+  -webkit-box-shadow: 0 5px 2px #159e62, 0 5px 2px #159e62;
+          box-shadow: 0 5px 2px #159e62, 0 5px 2px #159e62;
+}
+
+.container .row form small {
+  padding-top: .7rem;
+  max-width: 90%;
+  color: #838383;
+  margin: 0 auto;
+}
+
+.container .row form small span {
+  color: #f65555;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .container {
+    background: url(../images/bg-intro-desktop.png);
+    background-color: var(--main-red);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: left;
+  }
+  .row {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .head {
+    font-size: 2.5rem !important;
+    max-width: 60% !important;
+    margin: 0 auto;
+  }
+  .sub-text {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  .second {
+    padding: 2rem 2rem;
+  }
+  #submit {
+    padding: .5rem 5rem;
+    font-weight: 400;
+  }
+  #submit:hover {
+    opacity: .85;
+    cursor: pointer;
+  }
+  .contain {
+    padding: .6rem 1rem !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: .6rem !important;
+  }
+  .contain span {
+    padding-right: .2rem;
+  }
+  input {
+    font-size: .7rem !important;
+  }
+  small {
+    text-align: center;
+    max-width: 100%;
+    padding: .8rem 0 !important;
+    font-size: .5rem !important;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  color: #232323;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */
